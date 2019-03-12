@@ -1,0 +1,443 @@
+* {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	border: 0;
+	outline: 0;
+    font-family: 'Laila', serif;
+
+	
+}
+
+#logo img
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+}
+/* General */
+body {
+	width: 100%;
+    font-family: 'Laila', serif;
+	background-image:url(maple.png) ;
+	background-size:auto;
+	background-repeat:no-repeat;
+}
+
+button {
+	position: relative;
+	width: 160px;
+	text-transform: uppercase;
+	font-size: 14px;
+	background-color: transparent;
+}
+
+form {
+  position: relative;
+	width: 260px;
+	height: 100%;
+	padding: 20px;
+	background: #ff8409;
+	border-radius: 5px;
+	float:right;
+}
+
+form label{
+	display: block;
+	opacity: 0;
+} form input {
+	display: block;
+	opacity: 0;
+}
+
+legend {
+  position: absolute;
+  top: 0;
+  left: -10000px;
+}
+
+label {
+	padding-top: 15px;
+	font-size: 14px;
+	color: #a60000;
+	letter-spacing: 0.5px;
+}
+
+input:not([type="submit"]) {
+	width: 220px;
+	margin: 5px auto 0;
+	padding: 0 15px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #3b4465;
+	background: #ffdfbf;
+	border: 1px solid #cddbef;
+	border-radius: 2px;
+}
+
+input[type="submit"] {
+	float: right;
+	width: 120px;
+	margin-top: 30px;
+	line-height: 40px;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+
+/* Buttons and Inputs */
+.buttons{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	width: 550px;
+	margin-top: -300px;
+	
+	float:right;
+	height: 100px;
+	padding-top: 70px;
+	text-align: center;
+}
+h3{
+	margin-top:110px;
+	margin-left:40px;
+	
+}
+h4{
+	margin-left:120px;
+}
+h1{
+	margin-top:70px;
+	margin-left:200px;
+}
+.forms {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: right;
+	width: 550px;
+	border: 12px;
+	border-color: #fffff;
+	float:right;
+	padding-top: 50px;
+	  float:right;
+	  margin-top: -200px;
+	  margin-left:2000px;
+}
+
+
+
+.log-link{
+	cursor: pointer;
+  color: #bbb;
+}
+.sign-link {
+  cursor: pointer;
+  color: #bbb;
+}
+
+.log-link.login-button-active{
+	cursor: default;
+  color: #fff;
+}
+.sign-link.signup-button-active {
+  cursor: default;
+  color: #fff;
+}
+
+.login-underline{
+	position: absolute;
+	top: 35px;
+	left: 30px;
+	height: 2px;
+	width: 100px;
+	opacity: 0;
+	background: #a80000;
+}
+.signup-underline {
+	position: absolute;
+	top: 35px;
+	left: 30px;
+	height: 2px;
+	width: 100px;
+	opacity: 0;
+	background: #a80000;
+}
+
+.login-underline.login-button-active {
+	animation: loginUnderlineActive .2s linear .1s forwards;
+	transform-origin: right;
+}
+
+.login-underline.signup-button-active {
+	animation: loginUnderlineInactive .3s linear forwards;
+	transform-origin: right;
+}
+
+.signup-underline.signup-button-active {
+	animation: signupUnderlineActive .2s linear .1s forwards;
+	transform-origin: left;
+}
+
+.signup-underline.login-button-active {
+	animation: signupUnderlineInactive .3s linear forwards;
+	transform-origin: left;
+}
+
+.login-button-active {
+  animation: buttonsMoveToRight .3s linear forwards;
+}
+
+.signup-button-active {
+  animation: buttonsMoveToLeft .3s linear forwards;
+}
+
+.login-form.login-button-active label{
+	animation: fielsetSlideToRight .5s linear 0.25s forwards;
+}
+.login-form.login-button-active input {
+  animation: fielsetSlideToRight .5s linear 0.25s forwards;
+}
+
+.signup-form.signup-button-active label{
+	animation: fieldsetSlideToLeft .5s linear 0.25s forwards;
+}
+.signup-form.signup-button-active input {
+  animation: fieldsetSlideToLeft .5s linear 0.25s forwards;
+}
+
+.login-form input[type="submit"] {
+	color: #a80000;
+	background: #ff9562;
+	float:right;
+	border-color:#a80000;
+	border: 2px solid #a80000;
+}
+
+.signup-form input[type="submit"] {
+	color: #a80000;
+	background: #ff9562;
+	float:right;
+	border-color:#a80000;
+	border: 2px solid #a80000;
+}
+
+.login-form {
+  animation: loginToBottom .4s linear forwards;
+  float:right;
+}
+
+.signup-form {
+  animation: signUpToBottom .4s linear forwards;
+  float:right;
+}
+
+.login-form.login-button-active {
+  animation: loginToTop .4s linear forwards;
+}
+
+.signup-form.signup-button-active {
+  animation: signUpToTop .4s linear forwards;
+}
+
+
+/* Animations */
+@keyframes loginUnderlineActive {
+	0% {
+		transform: scale(0);
+		opacity: 1;
+	}
+  
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes signupUnderlineActive {
+	0% {
+		transform: scale(0);
+		opacity: 1;
+	}
+  
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes loginUnderlineInactive {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+  
+	100% {
+		transform: scale(0);
+		opacity: 1;
+	}
+}
+
+@keyframes signupUnderlineInactive {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+  
+	100% {
+		transform: scale(0);
+		opacity: 1;
+	}
+}
+
+@keyframes buttonsMoveToRight {
+	0% {
+		transform: translate(0);
+	}
+  
+	100% {
+		transform: translate(50px);
+	}
+}
+
+@keyframes buttonsMoveToLeft {
+	0% {
+		transform: translate(0);
+	}
+  
+	100% {
+		transform: translate(-50px);
+	}
+}
+
+@keyframes fielsetSlideToRight {
+	0% {
+		transform: translate(-15px);
+		opacity: 0;
+	}
+  
+	100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fieldsetSlideToLeft {
+	0% {
+		transform: translate(15px);
+		opacity: 0;
+	}
+  
+	100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+@keyframes loginToBottom {
+	0% {
+		transform: translate(100px);
+		z-index: 10;
+		background-color: #ffdfbf;
+	}
+  
+	49% {
+		transform: translate(0);
+		z-index: 10;
+	}
+  
+	50% {
+		transform: translate(0);
+		z-index: 1;
+	}
+  
+	100% {
+		transform: translate(100px, 20px);
+		z-index: 1;
+		background-color: #ff8409;
+	}
+}
+
+@keyframes signUpToBottom {
+	0% {
+		transform: translate(-100px);
+		z-index: 10;
+		height: 360px;
+		background-color: #ffdfbf;
+	}
+  
+	49% {
+		transform: translate(0);
+		z-index: 10;
+	}
+  
+	50% {
+		transform: translate(0);
+		z-index: 1;
+	}
+  
+	100% {
+		transform: translate(-100px, 20px);
+		z-index: 1;
+		height: 280px;
+		background-color: #ff8409;
+	}
+}
+
+@keyframes loginToTop {
+	0% {
+		transform: translate(100px, 20px);
+		z-index: 1;
+		background-color: #ffdfbf;
+	}
+  
+	49% {
+		transform: translate(0);
+		z-index: 1;
+	}
+  
+	50% {
+		transform: translate(0);
+		z-index: 10;
+	}
+  
+	100% {
+		transform: translate(100px);
+		z-index: 10;
+		background-color: #fff;
+	}
+}
+
+@keyframes signUpToTop {
+	0% {
+		transform: translate(-100px, 20px);
+		z-index: 1;
+		background-color: #ffdfbf;
+	}
+  
+	25% {
+    height: 280px;
+    background-color: #ffdfbf;
+  }
+  
+	49% {
+		transform: translate(0);
+		z-index: 1;
+		background-color: #ffdfbf;
+	}
+  
+	50% {
+		transform: translate(0);
+		z-index: 10;
+		
+	}
+	100% {
+		transform: translate(-100px);
+		z-index: 10;
+		height: 100%;
+		margin-bottom:5%;
+		background-color: #fff;
+	}
+}
